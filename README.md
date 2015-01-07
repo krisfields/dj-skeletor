@@ -1,8 +1,10 @@
-# DJ Skeletor
+# Django Starter
 
-DJ Skeletor is a skeleton Django project handy for quick bootstrapping of new
+Django Starter is based off of DJ Skeletor which is a skeleton Django project handy for quick bootstrapping of new
 empty Django projects. It will help you get up and running with your project
 in seconds.
+
+I've added django-allauth, django-reversion, django-custom-user, django-toolkit (for heroku), django-imagekit, and model-mommy.  I updated the various settings files for each new package and changed a few things more to my liking.  I created a basic custom user model and added the necessary files to get setup on heroku quickly.
 
 The repository contains an empty, relocatable Django project with a selection
 of useful Django application and setup for development, production and
