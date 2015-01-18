@@ -20,6 +20,7 @@ django-taggit==0.12.2
 django-tinymce==1.5.3
 django-toolbelt==0.0.1
 ecdsa==0.11
+fake-factory==0.4.2
 flake8==2.3.0
 gunicorn==19.1.1
 heroku==0.1.4
