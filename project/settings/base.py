@@ -186,7 +186,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
 
     'tinymce',
-
+    'pages',  # Overrides flatpages admin to add tinymce functionality
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
