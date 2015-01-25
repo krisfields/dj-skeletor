@@ -1,0 +1,38 @@
+{% load url from future %}
+<!doctype html>
+<html lang="en" dir="ltr">
+
+{% load i18n staticfiles %}
+
+    <head>
+        <meta charset="utf-8" />
+        <title>{% if pagetitle %}{{ pagetitle }} / {% endif %}{{ settings.PROJECT_NAME }}</title>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Didact+Gothic|Cabin:400italic,700italic,400,700" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        
+        {# for any pages that need specific js loaded #}
+        {% block head_js %}{% endblock %}
+
+        {% block extra_head %}{% endblock %}
+
+
+    </head>
+
+    <body>
+    {% block content %}<h1>Home page content</h1>
+    <h3>{{ request.user }}</h3>
+    {% if request.user.is_authenticated %}
+    <h3>authenticated</h3>
+    {% else %}
+    <h3>not authenticated</h3>
+    {% endif %}
+    {% endblock %}
+
+    {% block foot_js %}{% endblock %}  
+    </body>
+
+</html>
