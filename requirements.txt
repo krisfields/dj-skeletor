@@ -1,4 +1,4 @@
-Django==1.7.2
+Django==1.7.4
 Fabric==1.10.1
 Pillow==2.7.0
 Werkzeug==0.9.6
@@ -43,6 +43,7 @@ raven==5.1.1
 readline==6.2.4.1
 requests==2.5.1
 requests-oauthlib==0.4.2
+simplejson==3.6.5
 six==1.7.3
 sqlparse==0.1.14
 static==1.1.1
