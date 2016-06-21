@@ -1,6 +1,6 @@
 from django.db import models
-from custom_user.models import AbstractEmailUser, EmailUserManager
 from django.utils.translation import ugettext_lazy as _
+from custom_user.models import AbstractEmailUser, EmailUserManager
 
 
 class User(AbstractEmailUser):

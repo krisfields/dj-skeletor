@@ -29,8 +29,6 @@ of useful Django application and setup for development, production and
 
 The development environment by default includes:
 
-* [South](http://south.readthedocs.org/en/latest/about.html)
-  for database migrations (both development and production use it)
 * [Django Debug Toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar)
   for displaying extra information about view execution
 * SQLite database (`dev.db` in the project root directory)

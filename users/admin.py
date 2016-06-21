@@ -1,12 +1,13 @@
 from django.contrib import admin
-from .models import User
-from custom_user.admin import EmailUserAdmin
 from django.db import models
+from custom_user.admin import EmailUserAdmin
 from extra_goodies.widgets import ImagePreviewWidget
-import reversion
+from reversion.admin import VersionAdmin
+from .models import User
 
 
-class UserAdmin(EmailUserAdmin, reversion.VersionAdmin):
+@admin.register(User)
+class UserAdmin(EmailUserAdmin, VersionAdmin):
     list_display = ['email_image', 'first_name', 'last_name', 'date_joined']
     fieldsets = EmailUserAdmin.fieldsets
     fieldsets = list(fieldsets)
@@ -26,5 +27,3 @@ class UserAdmin(EmailUserAdmin, reversion.VersionAdmin):
     email_image.allow_tags = True
     email_image.short_description = "Email"
     email_image.admin_order_field = "email"
-
-admin.site.register(User, UserAdmin)
