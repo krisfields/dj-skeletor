@@ -43,9 +43,9 @@ if (ENV_SETTING('SQL_DEBUG', 'false') == 'true'):
 # set up Django Debug Toolbar if installed
 try:
     import debug_toolbar  # noqa
-    # MIDDLEWARE_CLASSES += (
-    #     'debug_toolbar.middleware.DebugToolbarMiddleware',
-    # )
+    MIDDLEWARE_CLASSES += (
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+    )
     INSTALLED_APPS += (
         'debug_toolbar',
     )
